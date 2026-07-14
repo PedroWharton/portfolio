@@ -13,6 +13,7 @@ Features futuras (cada una con su propio spec/plan):
   export MAVEN_OPTS="-Xmx4g"
   ```
 - Build: `mvn -f portfolio-app/pom.xml clean verify -DskipTests` (desde la raíz del repo). BUILD SUCCESS confirmado en 13:22 min.
+- Para desarrollo local, agregar el perfil `-Plocal-dev` (salta coverage, checkstyle y traducciones — más rápido). El `CLAUDE.md` del repo documenta las variantes por módulo (core solo, core+UI, tests).
 - App resultante: `portfolio-product/target/products/name.abuchen.portfolio.product/macosx/cocoa/aarch64/PortfolioPerformance.app` (build Apple Silicon; también existe variante `x86_64` y un zip en `portfolio-product/target/portfolio.product-0.85.1-SNAPSHOT.zip`).
 - Tests: no corridos todavía (pendiente). Comando completo: `mvn -f portfolio-app/pom.xml clean verify` (sin `-DskipTests`). Opción más rápida y offline para los tests del core (de CONTRIBUTING.md):
   ```bash
